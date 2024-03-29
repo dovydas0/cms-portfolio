@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "unique": false,
+      "required": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "techStack": {
+      "displayName": "techStack",
+      "type": "component",
+      "repeatable": true,
+      "component": "tech-stack.tech-stack",
+      "required": true
+    },
+    "url": {
+      "type": "string"
+    },
+    "projectFeatures": {
+      "type": "richtext"
+    }
+  }
+}
