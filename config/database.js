@@ -69,6 +69,7 @@ module.exports = ({ env }) => {
       },
     },
     postgres: {
+      client: "postgres",
       connection: {
         connectionString: env("DATABASE_URL"),
         host: env("DATABASE_HOST", "localhost"),
